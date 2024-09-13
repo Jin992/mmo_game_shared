@@ -12,7 +12,7 @@ pub struct Player {
 
 #[derive(Component, Deserialize, Serialize, Deref, DerefMut)]
 pub struct PlayerPosition {
-    pub position: Vec3,
+    pub position: Vec2,
 }
 
 #[derive(Component, Deserialize, Serialize)]
