@@ -21,3 +21,9 @@ pub struct PlayerColor(Color);
 /// A movement event for the controlled box.
 #[derive(Debug, Default, Deserialize, Event, Serialize)]
 pub struct MoveDirection(Vec2);
+
+impl MoveDirection {
+    pub fn direction(&self) -> Vec2 {
+        self.0
+    }
+}
