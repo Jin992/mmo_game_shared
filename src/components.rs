@@ -6,6 +6,12 @@ use bevy_replicon::prelude::*;
 #[derive(Component, Serialize, Deserialize)]
 pub struct Player(ClientId);
 
+impl Player {
+    pub fn client_id(&self) -> ClientId {
+        self.0
+    }
+}
+
 #[derive(Component, Deserialize, Serialize, Deref, DerefMut)]
 pub struct PlayerPosition(Vec2);
 
